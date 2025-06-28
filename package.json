@@ -1,0 +1,39 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "https://github.com/NairolfRP/gtaw-oauth-providers.git",
+  "description": "Some GTA World OAuth providers for some frameworks and libraries. ",
+  "scripts": {
+    "build": "pnpm -r build",
+    "clean": "pnpm -r clean",
+    "test": "pnpm -r test",
+    "lint": "eslint --cache .",
+    "format": "prettier --cache -check .",
+    "format:write": "prettier --cache --write .",
+    "release": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
+    "release:dry": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release --dry-run -e semantic-release-monorepo"
+  },
+  "keywords": [],
+  "author": {
+    "name": "NairolfRP",
+    "url": "https://github.com/NairolfRP"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NairolfRP/gtaw-oauth-providers/issues"
+  },
+  "homepage": "https://github.com/NairolfRP/gtaw-oauth-providers",
+  "packageManager": "pnpm@10.12.4",
+  "devDependencies": {
+    "@eslint/js": "^9.30.0",
+    "eslint": "^9.30.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.2.0",
+    "prettier": "^3.6.2",
+    "semantic-release": "^24.2.5",
+    "semantic-release-monorepo": "^8.0.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0"
+  }
+}
