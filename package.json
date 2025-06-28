@@ -9,7 +9,7 @@
     "clean": "pnpm -r clean",
     "test": "pnpm -r test",
     "lint": "eslint --cache .",
-    "format": "prettier --cache -check .",
+    "format": "prettier --cache -c .",
     "format:write": "prettier --cache --write .",
     "release": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
     "release:dry": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release --dry-run -e semantic-release-monorepo"
