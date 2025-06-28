@@ -1,0 +1,48 @@
+{
+  "name": "@gtaw-oauth-providers/authjs",
+  "version": "0.0.0",
+  "description": "GTA World OAuth provider for AuthJS.",
+  "keywords": [
+    "authjs",
+    "gtaw",
+    "provider",
+    "oauth",
+    "gtaworld"
+  ],
+  "homepage": "https://github.com/NairolfRP/gtaw-oauth-providers",
+  "repository": "https://github.com/NairolfRP/gtaw-oauth-providers.git",
+  "author": {
+    "name": "NairolfRP",
+    "url": "https://github.com/NairolfRP"
+  },
+  "type": "module",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./src": {
+      "types": "./src/index.d.ts"
+    },
+    "./types": {
+      "types": "./types.d.ts"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf *.js *.d.ts* src"
+  },
+  "dependencies": {
+    "next-auth": "5.0.0-beta.29"
+  },
+  "devDependencies": {
+    "@auth/core": "^0.40.0"
+  }
+}
