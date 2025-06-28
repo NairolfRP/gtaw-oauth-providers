@@ -2,6 +2,6 @@
  * @type {import('semantic-release').GlobalConfig}
  */
 export default {
-  branches: ["release"],
+  branches: ["main"],
   extends: "semantic-release-monorepo",
 };
