@@ -1,0 +1,16 @@
+.prettierignore
+.DS_Store
+.pnpm-debug.log
+node_modules
+pnpm-lock.yaml
+pnpm-workspace.yaml
+*.d.ts
+*.d.ts.map
+eslint.config.mjs
+package.json
+README.md
+tsconfig.json
+
+# --------------- Packages ---------------
+packages/**/*.cjs
+packages/**/*.js
