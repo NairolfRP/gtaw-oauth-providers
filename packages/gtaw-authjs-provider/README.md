@@ -25,3 +25,6 @@ export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
   
   Define the appropriate base URL for the target server. (example, "fr" sets the base URL of the OAuth endpoint to ``https://ucp-fr.gta.world``)
 
+## Disclaimer
+
+> *Note: This script was not created by the GTA World team.*
