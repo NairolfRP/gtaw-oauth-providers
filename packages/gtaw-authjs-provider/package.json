@@ -11,7 +11,10 @@
     "gtaworld"
   ],
   "homepage": "https://github.com/NairolfRP/gtaw-oauth-providers",
-  "repository": "https://github.com/NairolfRP/gtaw-oauth-providers.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NairolfRP/gtaw-oauth-providers.git"
+  },
   "author": {
     "name": "NairolfRP",
     "url": "https://github.com/NairolfRP"

@@ -2,7 +2,10 @@
   "name": "root",
   "version": "0.0.0",
   "private": true,
-  "repository": "https://github.com/NairolfRP/gtaw-oauth-providers.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NairolfRP/gtaw-oauth-providers.git"
+  },
   "description": "Some GTA World OAuth providers for some frameworks and libraries. ",
   "scripts": {
     "build": "pnpm -r build",
