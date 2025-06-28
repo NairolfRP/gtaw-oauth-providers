@@ -1,6 +1,7 @@
 {
   "name": "@gtaw-oauth-providers/authjs",
   "version": "0.0.0",
+  "private": false,
   "description": "GTA World OAuth provider for AuthJS.",
   "keywords": [
     "authjs",
