@@ -1,0 +1,52 @@
+{
+  "name": "@gtaw-oauth-providers/better-auth",
+  "version": "0.0.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "GTA World OAuth provider for Better-Auth.",
+  "keywords": [
+    "better-auth",
+    "gtaw",
+    "provider",
+    "oauth",
+    "gtaworld"
+  ],
+  "homepage": "https://github.com/NairolfRP/gtaw-oauth-providers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NairolfRP/gtaw-oauth-providers.git"
+  },
+  "author": {
+    "name": "NairolfRP",
+    "url": "https://github.com/NairolfRP"
+  },
+  "type": "module",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./src": {
+      "types": "./src/index.d.ts"
+    },
+    "./types": {
+      "types": "./types.d.ts"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf *.js *.d.ts* src"
+  },
+  "dependencies": {
+    "better-auth": "^1.3.4"
+  }
+}
