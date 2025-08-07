@@ -16,6 +16,7 @@ export default defineConfig([
   {
     rules: {
       "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
     },
   },
   eslintConfigPrettier
