@@ -21,7 +21,7 @@ export interface GTAWProfile extends Record<string, any> {
   user: {
     id: number;
     username: string;
-    confirmed: boolean;
+    confirmed: 0 | 1 | boolean;
     role: GTAWRole;
     character: GTAWCharacter[];
   };
