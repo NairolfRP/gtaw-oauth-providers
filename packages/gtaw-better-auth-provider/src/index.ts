@@ -1,4 +1,5 @@
 import type { OAuth2Tokens, ProviderOptions } from "better-auth";
+import { APIError } from "better-auth";
 import type { GenericOAuthConfig } from "better-auth/plugins/generic-oauth";
 
 type GTAW_SERVERS = "en" | "fr";
@@ -74,6 +75,18 @@ export function gtawOAuth(
     getUserInfo: async (tokens) => {
       const user = await fetchUserInfoFromGTAW(baseURL, tokens);
 
+      if (user.confirmed !== 1) {
+        throw new APIError("UNAUTHORIZED", {
+          message: "Unconfirmed GTAW account",
+        });
+      }
+
+      if (!user?.character || user.character.length === 0) {
+        throw new APIError("UNAUTHORIZED", {
+          message: "GTAW account without characters",
+        });
+      }
+
       const accountID = String(user.id);
 
       return {
@@ -96,6 +109,21 @@ export function gtawOAuth(
         updateAt: Date;
         original: GTAWProfile["user"];
       };
+
+      if (profile.original.confirmed !== 1) {
+        throw new APIError("UNAUTHORIZED", {
+          message: "Unconfirmed GTAW account - sign-up rejected",
+        });
+      }
+
+      if (
+        !profile.original?.character ||
+        profile.original.character.length === 0
+      ) {
+        throw new APIError("UNAUTHORIZED", {
+          message: "GTAW account without characters - sign-up rejected",
+        });
+      }
 
       const accountID = String(profile.id);
 
