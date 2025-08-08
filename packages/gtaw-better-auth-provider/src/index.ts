@@ -1,5 +1,5 @@
 import type { OAuth2Tokens, ProviderOptions } from "better-auth";
-import { APIError } from "better-auth";
+import { APIError } from "better-auth/api";
 import type { GenericOAuthConfig } from "better-auth/plugins/generic-oauth";
 
 type GTAW_SERVERS = "en" | "fr";
