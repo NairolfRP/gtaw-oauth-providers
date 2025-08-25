@@ -14,13 +14,9 @@
  |--------------------------------------------------------------------------
  */
 
-import { Oauth2Driver, RedirectRequest } from "@adonisjs/ally";
-import type { HttpContext } from "@adonisjs/core/http";
-import type {
-  AllyDriverContract,
-  AllyUserContract,
-  ApiRequestContract,
-} from "@adonisjs/ally/types";
+import { Oauth2Driver, RedirectRequest } from '@adonisjs/ally'
+import type { HttpContext } from '@adonisjs/core/http'
+import type { AllyDriverContract, AllyUserContract, ApiRequestContract } from '@adonisjs/ally/types'
 
 /**
  *
@@ -29,52 +25,51 @@ import type {
  * define additional properties (if needed)
  */
 export type GTAWorldDriverAccessToken = {
-  token: string;
-  type: "bearer";
-};
+  token: string
+  type: 'bearer'
+}
 
 /**
  * Scopes accepted by the driver implementation.
  */
-export type GTAWorldDriverScopes = string;
+export type GTAWorldDriverScopes = string
 
 /**
  * The configuration accepted by the driver implementation.
  */
 export type GTAWorldDriverConfig = {
-  clientId: string;
-  clientSecret: string;
-  callbackUrl: string;
-  authorizeUrl?: string;
-  accessTokenUrl?: string;
-  userInfoUrl?: string;
-  scopes?: string[];
-  server?: "en" | "fr";
-};
+  clientId: string
+  clientSecret: string
+  callbackUrl: string
+  authorizeUrl?: string
+  accessTokenUrl?: string
+  userInfoUrl?: string
+  server?: 'en' | 'fr'
+}
 
 export type GTAWorldUser = {
-  id: number;
-  username: string;
-  confirmed: 0 | 1;
+  id: number
+  username: string
+  confirmed: 0 | 1
   role: {
-    id: number;
-    user_id: number;
-    role_id: string;
-    server: number;
-  };
-  character: GTAWorldCharacter[];
-};
+    id: number
+    user_id: number
+    role_id: string
+    server: number
+  }
+  character: GTAWorldCharacter[]
+}
 
 export type GTAWorldCharacter = {
-  id: number;
-  memberid: number;
-  firstname: string;
-  lastname: string;
-};
+  id: number
+  memberid: number
+  firstname: string
+  lastname: string
+}
 
 export type GTAWorldDriverUserInfo = {
-  user: GTAWorldUser;
-};
+  user: GTAWorldUser
+}
 
 /**
  * Driver implementation. It is mostly configuration driven except the API call
@@ -84,7 +79,7 @@ class GTAWorldDriverClass
   extends Oauth2Driver<GTAWorldDriverAccessToken, GTAWorldDriverScopes>
   implements AllyDriverContract<GTAWorldDriverAccessToken, GTAWorldDriverScopes>
 {
-  protected GTAWUCPBaseUrl = "https://ucp.gta.world";
+  protected GTAWUCPBaseUrl = 'https://ucp.gta.world'
 
   /**
    * The URL for the redirect request. The user will be redirected on this page
@@ -92,42 +87,42 @@ class GTAWorldDriverClass
    *
    * Do not define query strings in this URL.
    */
-  protected authorizeUrl = `${this.GTAWUCPBaseUrl}/oauth/authorize`;
+  protected authorizeUrl
 
   /**
    * The URL to hit to exchange the authorization code for the access token
    *
    * Do not define query strings in this URL.
    */
-  protected accessTokenUrl = `${this.GTAWUCPBaseUrl}/oauth/token`;
+  protected accessTokenUrl
 
   /**
    * The URL to hit to get the user details
    *
    * Do not define query strings in this URL.
    */
-  protected userInfoUrl = `${this.GTAWUCPBaseUrl}/api/user`;
+  protected userInfoUrl
 
   /**
    * The param name for the authorization code. Read the documentation of your oauth
    * provider and update the param name to match the query string field name in
    * which the oauth provider sends the authorization_code post redirect.
    */
-  protected codeParamName = "code";
+  protected codeParamName = 'code'
 
   /**
    * The param name for the error. Read the documentation of your oauth provider and update
    * the param name to match the query string field name in which the oauth provider sends
    * the error post redirect
    */
-  protected errorParamName = "error";
+  protected errorParamName = 'error'
 
   /**
    * Cookie name for storing the CSRF token. Make sure it is always unique. So a better
    * approach is to prefix the oauth provider name to `oauth_state` value. For example:
    * For example: "facebook_oauth_state"
    */
-  protected stateCookieName = "GTAWorldDriver_oauth_state";
+  protected stateCookieName = 'GTAWorldDriver_oauth_state'
 
   /**
    * Parameter name to be used for sending and receiving the state from.
@@ -135,27 +130,31 @@ class GTAWorldDriverClass
    * name to match the query string used by the provider for exchanging
    * the state.
    */
-  protected stateParamName = "state";
+  protected stateParamName = 'state'
 
   /**
    * Parameter name for sending the scopes to the oauth provider.
    */
-  protected scopeParamName = "scope";
+  protected scopeParamName = 'scope'
 
   /**
    * The separator indentifier for defining multiple scopes
    */
-  protected scopesSeparator = " ";
+  protected scopesSeparator = ' '
 
   constructor(
     ctx: HttpContext,
-    public config: GTAWorldDriverConfig,
+    public config: GTAWorldDriverConfig
   ) {
-    super(ctx, config);
+    super(ctx, config)
 
-    if (config.server === "fr") {
-      this.GTAWUCPBaseUrl = "https://ucp-fr.gta.world";
+    if (config.server === 'fr') {
+      this.GTAWUCPBaseUrl = 'https://ucp-fr.gta.world'
     }
+
+    this.authorizeUrl = `${this.GTAWUCPBaseUrl}/oauth/authorize`
+    this.accessTokenUrl = `${this.GTAWUCPBaseUrl}/oauth/token`
+    this.userInfoUrl = `${this.GTAWUCPBaseUrl}/api/user`
 
     /**
      * Extremely important to call the following method to clear the
@@ -163,7 +162,7 @@ class GTAWorldDriverClass
      *
      * DO NOT REMOVE THE FOLLOWING LINE
      */
-    this.loadState();
+    this.loadState()
   }
 
   /**
@@ -171,12 +170,9 @@ class GTAWorldDriverClass
    * is made by the base implementation of "Oauth2" driver and this is a
    * hook to pre-configure the request.
    */
-  protected configureRedirectRequest(
-    request: RedirectRequest<GTAWorldDriverScopes>,
-  ) {
-    request.param("grant_type", "authorization_code");
-    request.param("response_type", "code");
-    request.scopes(this.config.scopes || []);
+  protected configureRedirectRequest(request: RedirectRequest<GTAWorldDriverScopes>) {
+    request.param('response_type', 'code')
+    request.scopes([])
   }
 
   /**
@@ -190,41 +186,30 @@ class GTAWorldDriverClass
    * Returns the HTTP request with th authorization header set
    */
   protected getAuthenticatedRequest(url: string, token: string) {
-    const request = this.httpClient(url);
-    request.header("Authorization", `Bearer ${token}`);
-    request.header("Accept", "application/json");
-    request.parseAs("json");
-    return request;
+    const request = this.httpClient(url)
+    request.header('Authorization', `Bearer ${token}`)
+    request.header('Accept', 'application/json')
+    request.parseAs('json')
+    return request
   }
 
-  protected async getUserInfo(
-    token: string,
-    callback?: (request: ApiRequestContract) => void,
-  ) {
-    const request = this.getAuthenticatedRequest(
-      this.config.userInfoUrl || this.userInfoUrl,
-      token,
-    );
-    if (typeof callback === "function") {
-      callback(request);
+  protected async getUserInfo(token: string, callback?: (request: ApiRequestContract) => void) {
+    const request = this.getAuthenticatedRequest(this.config.userInfoUrl || this.userInfoUrl, token)
+    if (typeof callback === 'function') {
+      callback(request)
     }
 
-    const original = (await request.get()) as GTAWorldDriverUserInfo;
-    const user = original.user;
-    const character = original.user.character[0];
-
+    const body = await request.get()
+    const user = body.user
     return {
       id: user.id.toString(),
-      nickName: `${character.firstname} ${character.lastname}`,
+      nickName: user.username,
       name: user.username,
       email: null,
-      emailVerificationState: "unsupported" as
-        | "verified"
-        | "unverified"
-        | "unsupported",
+      emailVerificationState: 'unsupported' as 'unsupported',
       avatarUrl: null,
-      original,
-    };
+      original: body.user,
+    }
   }
 
   /**
@@ -232,11 +217,11 @@ class GTAWorldDriverClass
    * means "ACCESS DENIED".
    */
   accessDenied() {
-    const error = this.getError();
+    const error = this.getError()
     if (!error) {
-      return false;
+      return false
     }
-    return error === "user_denied";
+    return error === 'user_denied'
   }
 
   /**
@@ -247,26 +232,27 @@ class GTAWorldDriverClass
    * https://github.com/adonisjs/ally/blob/develop/src/Drivers/Google/index.ts#L191-L199
    */
   async user(
-    callback?: (request: ApiRequestContract) => void,
+    callback?: (request: ApiRequestContract) => void
   ): Promise<AllyUserContract<GTAWorldDriverAccessToken>> {
-    const token = await this.accessToken(callback);
-    const user = await this.getUserInfo(token.token, callback);
+    const token = await this.accessToken(callback)
+    const user = await this.getUserInfo(token.token, callback)
+
     return {
       ...user,
       token,
-    };
+    }
   }
 
   async userFromToken(
     token: string,
-    callback?: (request: ApiRequestContract) => void,
-  ): Promise<AllyUserContract<{ token: string; type: "bearer" }>> {
-    const user = await this.getUserInfo(token, callback);
+    callback?: (request: ApiRequestContract) => void
+  ): Promise<AllyUserContract<{ token: string; type: 'bearer' }>> {
+    const user = await this.getUserInfo(token, callback)
 
     return {
       ...user,
-      token: { token, type: "bearer" as const },
-    };
+      token: { token, type: 'bearer' as const },
+    }
   }
 }
 
@@ -275,7 +261,7 @@ class GTAWorldDriverClass
  * inside the "config/ally.ts" file.
  */
 export function GTAWDriver(
-  config: GTAWorldDriverConfig,
+  config: GTAWorldDriverConfig
 ): (ctx: HttpContext) => GTAWorldDriverClass {
-  return (ctx) => new GTAWorldDriverClass(ctx, config);
+  return (ctx) => new GTAWorldDriverClass(ctx, config)
 }
