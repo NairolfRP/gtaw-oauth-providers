@@ -16,7 +16,12 @@
 
 import { Oauth2Driver, RedirectRequest } from '@adonisjs/ally'
 import type { HttpContext } from '@adonisjs/core/http'
-import type { AllyDriverContract, AllyUserContract, ApiRequestContract } from '@adonisjs/ally/types'
+import type {
+  AllyDriverContract,
+  AllyUserContract,
+  ApiRequestContract,
+  Oauth2AccessToken,
+} from '@adonisjs/ally/types'
 
 /**
  *
@@ -26,7 +31,10 @@ import type { AllyDriverContract, AllyUserContract, ApiRequestContract } from '@
  */
 export type GTAWorldDriverAccessToken = {
   token: string
-  type: 'bearer'
+  type: string
+  expiresIn: number
+  expiresAt: Exclude<Oauth2AccessToken['expiresAt'], undefined>
+  refreshToken: string
 }
 
 /**
