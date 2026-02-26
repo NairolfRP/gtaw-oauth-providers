@@ -214,7 +214,7 @@ class GTAWorldDriverClass
       nickName: user.username,
       name: user.username,
       email: null,
-      emailVerificationState: 'unsupported' as 'unsupported',
+      emailVerificationState: 'unsupported' as const,
       avatarUrl: null,
       original: body.user,
     }
