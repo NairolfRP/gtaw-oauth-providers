@@ -37,10 +37,6 @@ importers:
         version: 8.56.1(eslint@9.30.0)(typescript@5.9.3)
 
   packages/gtaw-adonisjs-ally-provider:
-    dependencies:
-      core@latest:
-        specifier: link:swc/core@latest
-        version: link:swc/core@latest
     devDependencies:
       '@adonisjs/ally':
         specifier: 6.0.0
