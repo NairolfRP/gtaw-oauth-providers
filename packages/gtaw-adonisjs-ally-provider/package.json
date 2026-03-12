@@ -1,6 +1,6 @@
 {
   "name": "@gtaw-oauth-providers/adonisjs-ally",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -49,17 +49,15 @@
   },
   "devDependencies": {
     "@adonisjs/ally": "6.0.0",
-    "@adonisjs/core": "^7.0.0",
+    "@adonisjs/core": "^7.0.1",
     "@adonisjs/eslint-config": "^3.0.0",
     "@adonisjs/prettier-config": "^1.4.5",
-    "@adonisjs/tsconfig": "^1.4.0",
-    "@swc/core": "1.11.24",
-    "ts-node-maintained": "^10.9.6",
+    "@adonisjs/tsconfig": "^1.4.1",
     "typescript": "~5.9.3"
   },
   "peerDependencies": {
-    "@adonisjs/ally": "^5.1.1",
-    "@adonisjs/core": "^6.19.0"
+    "@adonisjs/ally": "^6.0.0",
+    "@adonisjs/core": "^7.0.1"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/package"
