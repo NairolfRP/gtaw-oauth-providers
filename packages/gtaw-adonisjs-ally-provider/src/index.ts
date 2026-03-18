@@ -73,6 +73,7 @@ export type GTAWorldCharacter = {
   memberid: number
   firstname: string
   lastname: string
+  bank_routing_number: string
 }
 
 export type GTAWorldDriverUserInfo = {
