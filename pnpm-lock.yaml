@@ -43,10 +43,10 @@ importers:
     devDependencies:
       '@adonisjs/ally':
         specifier: 6.0.0
-        version: 6.0.0(@adonisjs/core@7.0.1(youch@3.3.4))
+        version: 6.0.0(@adonisjs/core@7.1.1(youch@3.3.4))
       '@adonisjs/core':
-        specifier: ^7.0.1
-        version: 7.0.1(youch@3.3.4)
+        specifier: ^7.1.1
+        version: 7.1.1(youch@3.3.4)
       '@adonisjs/eslint-config':
         specifier: ^3.0.0
         version: 3.0.0(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)
@@ -67,8 +67,8 @@ importers:
         version: 5.0.0-beta.30(next@15.3.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@auth/core':
-        specifier: ^0.41.1
-        version: 0.41.1
+        specifier: ^0.34.3
+        version: 0.34.3
 
   packages/gtaw-better-auth-provider:
     dependencies:
@@ -130,8 +130,8 @@ packages:
     resolution: {integrity: sha512-YVDRL8xHCtM6iMnAefOBaz6iXVpojwBPDQWPKxnVSucycYeNGrGitJiLy+cGaeAU7Gjm8al9SJRJt3rRPr5PKg==}
     engines: {node: '>=24.0.0'}
 
-  '@adonisjs/core@7.0.1':
-    resolution: {integrity: sha512-3wK3gxwEjkhpz+fKF9RxGk9FZgDekr3TMwZQsMt4XwSH+l2lY6au5Dsz5bepE/9gpbGJ5V9rbusv11YV8PrbIA==}
+  '@adonisjs/core@7.1.1':
+    resolution: {integrity: sha512-mi6oc5LleMDLQnoOd5etFDxNiFIdxnzMhEvbZ/CFyQ5wafksFHfMAEOlPetf2Y823/looZ0qffoyQ6qOXLXEeQ==}
     engines: {node: '>=24.0.0'}
     hasBin: true
     peerDependencies:
@@ -221,8 +221,8 @@ packages:
     peerDependencies:
       '@adonisjs/fold': ^11.0.0-next.2
 
-  '@adonisjs/logger@7.1.0':
-    resolution: {integrity: sha512-l96HiHkoh1h2lL5DreGx9gexoPHVqJ0OFs118EpyyrZHtPlq3dojMQlO+h/r/igalZ9ESsZs3uBYfgc7RLrVvA==}
+  '@adonisjs/logger@7.1.1':
+    resolution: {integrity: sha512-MmUlp8xBMT6zZy0+vnQcQjHIlNfU4pUJARlINr7Bqha9BvhIn03QZgJL5QJ+kJe1tl6ZpNAryoRTJUiOk/wINQ==}
     engines: {node: '>=24.0.0'}
     peerDependencies:
       pino-pretty: ^13.1.1
@@ -244,12 +244,12 @@ packages:
     resolution: {integrity: sha512-UQFQ6SgyJ6LX42W8rHCs8KVc0JS0tzVL9ct4XYedJukskYVWTo49tNiMEK9C2HTyarbNiT/RVIRSY82vH+6sTg==}
     engines: {node: '>=4'}
 
-  '@auth/core@0.41.0':
-    resolution: {integrity: sha512-Wd7mHPQ/8zy6Qj7f4T46vg3aoor8fskJm6g2Zyj064oQ3+p0xNZXAV60ww0hY+MbTesfu29kK14Zk5d5JTazXQ==}
+  '@auth/core@0.34.3':
+    resolution: {integrity: sha512-jMjY/S0doZnWYNV90x0jmU3B+UcrsfGYnukxYrRbj0CVvGI/MX3JbHsxSrx2d4mbnXaUsqJmAcDfoQWA6r0lOw==}
     peerDependencies:
       '@simplewebauthn/browser': ^9.0.1
       '@simplewebauthn/server': ^9.0.2
-      nodemailer: ^6.8.0
+      nodemailer: ^7
     peerDependenciesMeta:
       '@simplewebauthn/browser':
         optional: true
@@ -258,12 +258,12 @@ packages:
       nodemailer:
         optional: true
 
-  '@auth/core@0.41.1':
-    resolution: {integrity: sha512-t9cJ2zNYAdWMacGRMT6+r4xr1uybIdmYa49calBPeTqwgAFPV/88ac9TEvCR85pvATiSPt8VaNf+Gt24JIT/uw==}
+  '@auth/core@0.41.0':
+    resolution: {integrity: sha512-Wd7mHPQ/8zy6Qj7f4T46vg3aoor8fskJm6g2Zyj064oQ3+p0xNZXAV60ww0hY+MbTesfu29kK14Zk5d5JTazXQ==}
     peerDependencies:
       '@simplewebauthn/browser': ^9.0.1
       '@simplewebauthn/server': ^9.0.2
-      nodemailer: ^7.0.7
+      nodemailer: ^6.8.0
     peerDependenciesMeta:
       '@simplewebauthn/browser':
         optional: true
@@ -400,6 +400,9 @@ packages:
 
   '@emnapi/runtime@1.8.1':
     resolution: {integrity: sha512-mehfKSMWjjNol8659Z8KxEMrdSJDDot5SXMq00dM8BN4o+CLNXQ0xH2V7EchNHV4RmbZLmmPdEaXZc5H2FXmDg==}
+
+  '@emnapi/runtime@1.9.1':
+    resolution: {integrity: sha512-VYi5+ZVLhpgK4hQ0TAjiQiZ6ol0oe4mBx7mVv7IflsiEp0OWoVsp/+f9Vc1hOhE0TtkORVrI1GvzyreqpgWtkA==}
 
   '@emnapi/wasi-threads@1.2.0':
     resolution: {integrity: sha512-N10dEJNSsUx41Z6pZsXU8FjPjpBEplgH24sfkmITrBED1/U2Esum9F3lfLrMjKHHjmi557zQn7kR9R+XWXu5Rg==}
@@ -1005,6 +1008,9 @@ packages:
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
 
+  '@types/cookie@0.6.0':
+    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
+
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -1369,8 +1375,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001778:
-    resolution: {integrity: sha512-PN7uxFL+ExFJO61aVmP1aIEG4i9whQd4eoSCebav62UwDyp5OHh06zN4jqKSMePVgxHifCw1QJxdRkA1Pisekg==}
+  caniuse-lite@1.0.30001780:
+    resolution: {integrity: sha512-llngX0E7nQci5BPJDqoZSbuZ5Bcs9F5db7EtgfwBerX9XGtkkiO4NwfDDIRzHTTwcYC8vC7bmeUEPGrKlR/TkQ==}
 
   case-anything@3.1.2:
     resolution: {integrity: sha512-wljhAjDDIv/hM2FzgJnYQg90AWmZMNtESCjTeLH680qTzdo0nErlCxOmgzgX4ZsZAtIvqHyD87ES8QyriXB+BQ==}
@@ -1499,6 +1505,10 @@ packages:
 
   cookie-es@2.0.0:
     resolution: {integrity: sha512-RAj4E421UYRgqokKUmotqAwuplYw15qtdXfY+hGzgCJ/MBjCVZcSoHK/kH9kocfjRjcDME7IiDWR/1WX1TM2Pg==}
+
+  cookie@0.6.0:
+    resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
+    engines: {node: '>= 0.6'}
 
   cookie@0.7.2:
     resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
@@ -2144,8 +2154,11 @@ packages:
     resolution: {integrity: sha512-qjdpeo2yKlYTH7nFdK0vbZWuTCesk4o63v5iVOlhMQPfuIZQfW/HI35SjfhA+4qpg36rnFSvUK5b1m+ckIblQQ==}
     engines: {node: '>= 0.6.0'}
 
-  jose@6.2.1:
-    resolution: {integrity: sha512-jUaKr1yrbfaImV7R2TN/b3IcZzsw38/chqMpo2XJ7i2F8AfM/lA4G1goC3JVEwg0H7UldTmSt3P68nt31W7/mw==}
+  jose@5.10.0:
+    resolution: {integrity: sha512-s+3Al/p9g32Iq+oqXxkW//7jk2Vig6FF1CFqzVXoTUXt2qz89YWbL+OwS17NFYEvxC35n0FKeGO2LGYSxeM2Gg==}
+
+  jose@6.2.2:
+    resolution: {integrity: sha512-d7kPDd34KO/YnzaDOlikGpOurfF0ByC2sEV4cANCtdqLlTfBlw2p14O/5d/zv40gJPbIQxfES3nSx1/oYNyuZQ==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -2194,8 +2207,8 @@ packages:
     resolution: {integrity: sha512-9zy9lkjac+TR1c2tG+mkNSVlyOpInnWdSMiue4F+kq8TwJSgv6o8jhLRg8Ho6SnZ9wOYUq/yozts9qQCfk7bIw==}
     engines: {node: '>=18'}
 
-  kysely@0.28.11:
-    resolution: {integrity: sha512-zpGIFg0HuoC893rIjYX1BETkVWdDnzTzF5e0kWXJFg5lE0k1/LfNWBejrcnOFu8Q2Rfq/hTDTU7XLUM8QOrpzg==}
+  kysely@0.28.13:
+    resolution: {integrity: sha512-jCkYDvlfzOyHaVsrvR4vnNZxG30oNv2jbbFBjTQAUG8n0h07HW0sZJHk4KAQIRyu9ay+Rg+L8qGa3lwt8Gve9w==}
     engines: {node: '>=20.0.0'}
 
   levn@0.4.1:
@@ -2371,8 +2384,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nanostores@1.1.1:
-    resolution: {integrity: sha512-EYJqS25r2iBeTtGQCHidXl1VfZ1jXM7Q04zXJOrMlxVVmD0ptxJaNux92n1mJ7c5lN3zTq12MhH/8x59nP+qmg==}
+  nanostores@1.2.0:
+    resolution: {integrity: sha512-F0wCzbsH80G7XXo0Jd9/AVQC7ouWY6idUCTnMwW5t/Rv9W8qmO6endavDwg7TNp5GbugwSukFMVZqzPSrSMndg==}
     engines: {node: ^20.0.0 || >=22.0.0}
 
   natural-compare@1.4.0:
@@ -2526,6 +2539,9 @@ packages:
       - treeverse
       - validate-npm-package-name
       - which
+
+  oauth4webapi@2.17.0:
+    resolution: {integrity: sha512-lbC0Z7uzAFNFyzEYRIC+pkSVvDHJTbEW+dYlSBAlCYDe6RxUkJ26bClhk8ocBZip1wfI9uKTe0fm4Ib4RHn6uQ==}
 
   oauth4webapi@3.8.5:
     resolution: {integrity: sha512-A8jmyUckVhRJj5lspguklcl90Ydqk61H3dcU0oLhH3Yv13KpAliKTt5hknpGGPZSSfOwGyraNEFmofDYH+1kSg==}
@@ -2736,10 +2752,18 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+  preact-render-to-string@5.2.3:
+    resolution: {integrity: sha512-aPDxUn5o3GhWdtJtW0svRC2SS/l8D9MAgo2+AWml+BhDImb27ALf04Q2d+AHqUUOc6RdSXFIBVa2gxzgMKgtZA==}
+    peerDependencies:
+      preact: '>=10'
+
   preact-render-to-string@6.5.11:
     resolution: {integrity: sha512-ubnauqoGczeGISiOh6RjX0/cdaF8v/oDXIjO85XALCQjwQP+SB4RDXXtvZ6yTYSjG+PC1QRP2AhPgCEsM2EvUw==}
     peerDependencies:
       preact: '>=10'
+
+  preact@10.11.3:
+    resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
 
   preact@10.24.3:
     resolution: {integrity: sha512-Z2dPnBnMUfyQfSQ+GBdsGa16hz35YmLmtTLhM169uW944hYL6xzTYkJjC07j+Wosz733pMWx0fgON3JNw1jJQA==}
@@ -2759,6 +2783,9 @@ packages:
     resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
     engines: {node: '>=14'}
     hasBin: true
+
+  pretty-format@3.8.0:
+    resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
 
   pretty-hrtime@1.0.3:
     resolution: {integrity: sha512-66hKPCr+72mlfiSjlEB1+45IjXSqvVAIy6mocupoww4tBFE9R9IhwwUGoI4G++Tc9Aq+2rxOt0RFU6gPcrte0A==}
@@ -3048,8 +3075,8 @@ packages:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
 
-  stacktracey@2.1.8:
-    resolution: {integrity: sha512-Kpij9riA+UNg7TnphqjH7/CzctQ/owJGNbFkfEeve4Z4uxT5+JapVLFXcsurIfN34gnTWZNJ/f7NMG0E8JDzTw==}
+  stacktracey@2.2.0:
+    resolution: {integrity: sha512-ETyQEz+CzXiLjEbyJqpbp+/T79RQD/6wqFucRBIlVNZfYq2Ay7wbretD4cxpbymZlaPWx58aIhPEY1Cr8DlVvg==}
 
   statuses@2.0.2:
     resolution: {integrity: sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw==}
@@ -3525,9 +3552,9 @@ snapshots:
       yargs-parser: 22.0.0
       youch: 3.3.4
 
-  '@adonisjs/ally@6.0.0(@adonisjs/core@7.0.1(youch@3.3.4))':
+  '@adonisjs/ally@6.0.0(@adonisjs/core@7.1.1(youch@3.3.4))':
     dependencies:
-      '@adonisjs/core': 7.0.1(youch@3.3.4)
+      '@adonisjs/core': 7.1.1(youch@3.3.4)
       '@poppinss/oauth-client': 7.0.2
 
   '@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0)':
@@ -3540,9 +3567,9 @@ snapshots:
       glob-parent: 6.0.2
       tempura: 0.4.1
 
-  '@adonisjs/bodyparser@11.0.0(@adonisjs/http-server@8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.0)(@boringnode/encryption@1.0.0)(youch@3.3.4))':
+  '@adonisjs/bodyparser@11.0.0(@adonisjs/http-server@8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.1)(@boringnode/encryption@1.0.0)(youch@3.3.4))':
     dependencies:
-      '@adonisjs/http-server': 8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.0)(@boringnode/encryption@1.0.0)(youch@3.3.4)
+      '@adonisjs/http-server': 8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.1)(@boringnode/encryption@1.0.0)(youch@3.3.4)
       '@poppinss/macroable': 1.1.1
       '@poppinss/middleware': 3.2.7
       '@poppinss/multiparty': 3.0.0
@@ -3559,20 +3586,20 @@ snapshots:
     dependencies:
       '@poppinss/utils': 7.0.1
 
-  '@adonisjs/core@7.0.1(youch@3.3.4)':
+  '@adonisjs/core@7.1.1(youch@3.3.4)':
     dependencies:
       '@adonisjs/ace': 14.0.1(youch@3.3.4)
       '@adonisjs/application': 9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0)
-      '@adonisjs/bodyparser': 11.0.0(@adonisjs/http-server@8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.0)(@boringnode/encryption@1.0.0)(youch@3.3.4))
+      '@adonisjs/bodyparser': 11.0.0(@adonisjs/http-server@8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.1)(@boringnode/encryption@1.0.0)(youch@3.3.4))
       '@adonisjs/config': 6.1.0
       '@adonisjs/env': 7.0.0
       '@adonisjs/events': 10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)
       '@adonisjs/fold': 11.0.0
       '@adonisjs/hash': 10.0.0
       '@adonisjs/health': 3.1.0
-      '@adonisjs/http-server': 8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.0)(@boringnode/encryption@1.0.0)(youch@3.3.4)
+      '@adonisjs/http-server': 8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.1)(@boringnode/encryption@1.0.0)(youch@3.3.4)
       '@adonisjs/http-transformers': 2.3.1(@adonisjs/fold@11.0.0)
-      '@adonisjs/logger': 7.1.0
+      '@adonisjs/logger': 7.1.1
       '@adonisjs/repl': 5.0.0
       '@boringnode/encryption': 1.0.0
       '@poppinss/colors': 4.1.6
@@ -3644,12 +3671,12 @@ snapshots:
       '@poppinss/utils': 7.0.1
       check-disk-space: 3.4.0
 
-  '@adonisjs/http-server@8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.0)(@boringnode/encryption@1.0.0)(youch@3.3.4)':
+  '@adonisjs/http-server@8.0.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/events@10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)(@adonisjs/logger@7.1.1)(@boringnode/encryption@1.0.0)(youch@3.3.4)':
     dependencies:
       '@adonisjs/application': 9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0)
       '@adonisjs/events': 10.1.0(@adonisjs/application@9.0.0(@adonisjs/config@6.1.0)(@adonisjs/fold@11.0.0))(@adonisjs/fold@11.0.0)
       '@adonisjs/fold': 11.0.0
-      '@adonisjs/logger': 7.1.0
+      '@adonisjs/logger': 7.1.1
       '@boringnode/encryption': 1.0.0
       '@poppinss/macroable': 1.1.1
       '@poppinss/matchit': 3.2.0
@@ -3678,7 +3705,7 @@ snapshots:
       '@poppinss/exception': 1.2.3
       '@poppinss/types': 1.2.1
 
-  '@adonisjs/logger@7.1.0':
+  '@adonisjs/logger@7.1.1':
     dependencies:
       '@poppinss/utils': 7.0.1
       abstract-logging: 2.0.1
@@ -3697,18 +3724,20 @@ snapshots:
 
   '@arr/every@1.0.1': {}
 
+  '@auth/core@0.34.3':
+    dependencies:
+      '@panva/hkdf': 1.2.1
+      '@types/cookie': 0.6.0
+      cookie: 0.6.0
+      jose: 5.10.0
+      oauth4webapi: 2.17.0
+      preact: 10.11.3
+      preact-render-to-string: 5.2.3(preact@10.11.3)
+
   '@auth/core@0.41.0':
     dependencies:
       '@panva/hkdf': 1.2.1
-      jose: 6.2.1
-      oauth4webapi: 3.8.5
-      preact: 10.24.3
-      preact-render-to-string: 6.5.11(preact@10.24.3)
-
-  '@auth/core@0.41.1':
-    dependencies:
-      '@panva/hkdf': 1.2.1
-      jose: 6.2.1
+      jose: 6.2.2
       oauth4webapi: 3.8.5
       preact: 10.24.3
       preact-render-to-string: 6.5.11(preact@10.24.3)
@@ -3743,47 +3772,47 @@ snapshots:
       '@babel/helper-string-parser': 8.0.0-rc.3
       '@babel/helper-validator-identifier': 8.0.0-rc.2
 
-  '@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)':
+  '@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)':
     dependencies:
       '@better-auth/utils': 0.3.1
       '@better-fetch/fetch': 1.1.21
       '@standard-schema/spec': 1.1.0
       better-call: 1.3.2(zod@4.3.6)
-      jose: 6.2.1
-      kysely: 0.28.11
-      nanostores: 1.1.1
+      jose: 6.2.2
+      kysely: 0.28.13
+      nanostores: 1.2.0
       zod: 4.3.6
 
-  '@better-auth/drizzle-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)':
+  '@better-auth/drizzle-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)':
     dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)
+      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)
       '@better-auth/utils': 0.3.1
 
-  '@better-auth/kysely-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)(kysely@0.28.11)':
+  '@better-auth/kysely-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(kysely@0.28.13)':
     dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)
+      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)
       '@better-auth/utils': 0.3.1
-      kysely: 0.28.11
+      kysely: 0.28.13
 
-  '@better-auth/memory-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)':
+  '@better-auth/memory-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)':
     dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)
+      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)
       '@better-auth/utils': 0.3.1
 
-  '@better-auth/mongo-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)(mongodb@7.1.0)':
+  '@better-auth/mongo-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(mongodb@7.1.0)':
     dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)
+      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)
       '@better-auth/utils': 0.3.1
       mongodb: 7.1.0
 
-  '@better-auth/prisma-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)':
+  '@better-auth/prisma-adapter@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)':
     dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)
+      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)
       '@better-auth/utils': 0.3.1
 
-  '@better-auth/telemetry@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))':
+  '@better-auth/telemetry@1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))':
     dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)
+      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)
       '@better-auth/utils': 0.3.1
       '@better-fetch/fetch': 1.1.21
 
@@ -3824,6 +3853,11 @@ snapshots:
     optional: true
 
   '@emnapi/runtime@1.8.1':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
+  '@emnapi/runtime@1.9.1':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -3975,7 +4009,7 @@ snapshots:
 
   '@img/sharp-wasm32@0.34.5':
     dependencies:
-      '@emnapi/runtime': 1.8.1
+      '@emnapi/runtime': 1.9.1
     optional: true
 
   '@img/sharp-win32-arm64@0.34.5':
@@ -4374,6 +4408,8 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@types/cookie@0.6.0': {}
+
   '@types/estree@1.0.8': {}
 
   '@types/he@1.2.3': {}
@@ -4657,22 +4693,22 @@ snapshots:
 
   better-auth@1.5.5(mongodb@7.1.0)(next@15.3.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
-      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1)
-      '@better-auth/drizzle-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)
-      '@better-auth/kysely-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)(kysely@0.28.11)
-      '@better-auth/memory-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)
-      '@better-auth/mongo-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)(mongodb@7.1.0)
-      '@better-auth/prisma-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))(@better-auth/utils@0.3.1)
-      '@better-auth/telemetry': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.1)(kysely@0.28.11)(nanostores@1.1.1))
+      '@better-auth/core': 1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0)
+      '@better-auth/drizzle-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)
+      '@better-auth/kysely-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(kysely@0.28.13)
+      '@better-auth/memory-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)
+      '@better-auth/mongo-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)(mongodb@7.1.0)
+      '@better-auth/prisma-adapter': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))(@better-auth/utils@0.3.1)
+      '@better-auth/telemetry': 1.5.5(@better-auth/core@1.5.5(@better-auth/utils@0.3.1)(@better-fetch/fetch@1.1.21)(better-call@1.3.2(zod@4.3.6))(jose@6.2.2)(kysely@0.28.13)(nanostores@1.2.0))
       '@better-auth/utils': 0.3.1
       '@better-fetch/fetch': 1.1.21
       '@noble/ciphers': 2.1.1
       '@noble/hashes': 2.0.1
       better-call: 1.3.2(zod@4.3.6)
       defu: 6.1.4
-      jose: 6.2.1
-      kysely: 0.28.11
-      nanostores: 1.1.1
+      jose: 6.2.2
+      kysely: 0.28.13
+      nanostores: 1.2.0
       zod: 4.3.6
     optionalDependencies:
       mongodb: 7.1.0
@@ -4711,7 +4747,7 @@ snapshots:
   browserslist@4.28.1:
     dependencies:
       baseline-browser-mapping: 2.10.0
-      caniuse-lite: 1.0.30001778
+      caniuse-lite: 1.0.30001780
       electron-to-chromium: 1.5.307
       node-releases: 2.0.36
       update-browserslist-db: 1.2.3(browserslist@4.28.1)
@@ -4730,7 +4766,7 @@ snapshots:
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001778: {}
+  caniuse-lite@1.0.30001780: {}
 
   case-anything@3.1.2: {}
 
@@ -4860,6 +4896,8 @@ snapshots:
   convert-hrtime@5.0.0: {}
 
   cookie-es@2.0.0: {}
+
+  cookie@0.6.0: {}
 
   cookie@0.7.2: {}
 
@@ -5477,7 +5515,9 @@ snapshots:
 
   java-properties@1.0.2: {}
 
-  jose@6.2.1: {}
+  jose@5.10.0: {}
+
+  jose@6.2.2: {}
 
   js-tokens@4.0.0: {}
 
@@ -5515,7 +5555,7 @@ snapshots:
 
   ky@1.14.3: {}
 
-  kysely@0.28.11: {}
+  kysely@0.28.13: {}
 
   levn@0.4.1:
     dependencies:
@@ -5652,7 +5692,7 @@ snapshots:
 
   nanoid@3.3.11: {}
 
-  nanostores@1.1.1: {}
+  nanostores@1.2.0: {}
 
   natural-compare@1.4.0: {}
 
@@ -5672,7 +5712,7 @@ snapshots:
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.15
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001778
+      caniuse-lite: 1.0.30001780
       postcss: 8.4.31
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -5735,6 +5775,8 @@ snapshots:
       unicorn-magic: 0.3.0
 
   npm@11.11.0: {}
+
+  oauth4webapi@2.17.0: {}
 
   oauth4webapi@3.8.5: {}
 
@@ -5923,9 +5965,16 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  preact-render-to-string@5.2.3(preact@10.11.3):
+    dependencies:
+      preact: 10.11.3
+      pretty-format: 3.8.0
+
   preact-render-to-string@6.5.11(preact@10.24.3):
     dependencies:
       preact: 10.24.3
+
+  preact@10.11.3: {}
 
   preact@10.24.3: {}
 
@@ -5943,6 +5992,8 @@ snapshots:
       uglify-js: 3.19.3
 
   prettier@3.8.1: {}
+
+  pretty-format@3.8.0: {}
 
   pretty-hrtime@1.0.3: {}
 
@@ -6294,7 +6345,7 @@ snapshots:
 
   split2@4.2.0: {}
 
-  stacktracey@2.1.8:
+  stacktracey@2.2.0:
     dependencies:
       as-table: 1.0.55
       get-source: 2.0.12
@@ -6677,6 +6728,6 @@ snapshots:
     dependencies:
       cookie: 0.7.2
       mustache: 4.2.0
-      stacktracey: 2.1.8
+      stacktracey: 2.2.0
 
   zod@4.3.6: {}

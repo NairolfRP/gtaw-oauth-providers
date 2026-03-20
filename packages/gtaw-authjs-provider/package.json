@@ -42,6 +42,9 @@
     "next-auth": "5.0.0-beta.30"
   },
   "devDependencies": {
-    "@auth/core": "^0.41.1"
+    "@auth/core": "^0.34.3"
+  },
+  "peerDependencies": {
+    "next-auth": "5.0.0-beta.30"
   }
 }

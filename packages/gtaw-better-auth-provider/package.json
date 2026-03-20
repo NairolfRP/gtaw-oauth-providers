@@ -40,5 +40,8 @@
   },
   "dependencies": {
     "better-auth": "^1.5.5"
+  },
+  "peerDependencies": {
+    "better-auth": "^1.5.5"
   }
 }
