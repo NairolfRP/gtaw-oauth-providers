@@ -1,3 +1,6 @@
+> [!WARNING]
+> Since Better-Auth is a better solution and now supports stateless sessions, the AuthJS provider is no longer maintained. Please consider migrating to or starting with [Better-Auth](https://better-auth.com/).
+
 ## GTA WORLD Oauth Provider for Authjs
 [GTA World](https://gta.world) OAuth integration for [AuthJS](https://authjs.dev/).
 
