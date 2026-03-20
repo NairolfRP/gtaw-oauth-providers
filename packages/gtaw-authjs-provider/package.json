@@ -23,28 +23,20 @@
     "url": "https://github.com/NairolfRP"
   },
   "type": "module",
-  "files": [
-    "*.js",
-    "*.d.ts",
-    "src"
-  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": ["build"],
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js",
-      "default": "./index.js"
+      "types": "./build/index.d.ts",
+      "imoort": "./build/index.js"
     },
-    "./src": {
-      "types": "./src/index.d.ts"
-    },
-    "./types": {
-      "types": "./types.d.ts"
-    }
+    "./types": "./build/types.d.ts"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf *.js *.d.ts* src"
+    "build": "tsdown",
+    "clean": "rm -rf build"
   },
   "dependencies": {
     "next-auth": "5.0.0-beta.30"

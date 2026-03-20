@@ -24,19 +24,20 @@
     "url": "https://github.com/NairolfRP"
   },
   "type": "module",
-  "files": [
-    "*.js",
-    "*.d.ts",
-    "src"
-  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": ["build"],
   "exports": {
-    ".": "./index.js",
-    "./types": "./types.d.ts"
+    ".": {
+      "types": "./build/index.d.ts",
+      "imoort": "./build/index.js"
+    },
+    "./types": "./build/types.d.ts"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf *.js *.d.ts* src"
+    "build": "tsdown",
+    "clean": "rm -rf build"
   },
   "devDependencies": {
     "@adonisjs/ally": "6.0.0",
