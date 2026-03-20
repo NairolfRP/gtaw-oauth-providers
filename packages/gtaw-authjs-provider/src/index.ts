@@ -36,6 +36,9 @@ function getGTAWBaseURL({ server = "en" }: GTAW_SERVER): string {
   }
 }
 
+/**
+ * @deprecated Since Better-Auth is a better solution and now supports stateless sessions, the AuthJS provider is no longer maintained. Please consider migrating to or starting with [Better-Auth](https://better-auth.com/).
+ */
 export function GTAWorldProvider<P extends GTAWorldProfile>({
   server = "en",
   ...options
