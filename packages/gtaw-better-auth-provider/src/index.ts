@@ -16,6 +16,7 @@ export interface GTAWCharacter extends Record<string, any> {
   memberid: number;
   firstname: string;
   lastname: string;
+  bank_routing_number: string;
 }
 
 export interface GTAWProfile extends Record<string, any> {

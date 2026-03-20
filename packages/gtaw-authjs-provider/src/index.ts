@@ -20,6 +20,7 @@ export type GTAWorldProfile = {
       memberid: number;
       firstname: string;
       lastname: string;
+      bank_routing_number: string;
     }>;
   };
 };
