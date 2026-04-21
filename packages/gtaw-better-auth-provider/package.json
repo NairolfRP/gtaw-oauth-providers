@@ -25,7 +25,9 @@
   "type": "module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "exports": {
     ".": {
       "types": "./build/index.d.ts",
@@ -39,9 +41,9 @@
     "clean": "rm -rf build"
   },
   "dependencies": {
-    "better-auth": "^1.5.5"
+    "better-auth": "^1.6.5"
   },
   "peerDependencies": {
-    "better-auth": "^1.5.5"
+    "better-auth": "^1.6.5"
   }
 }

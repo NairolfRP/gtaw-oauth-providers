@@ -26,7 +26,9 @@
   "type": "module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "exports": {
     ".": {
       "types": "./build/index.d.ts",
@@ -40,16 +42,16 @@
     "clean": "rm -rf build"
   },
   "devDependencies": {
-    "@adonisjs/ally": "6.0.0",
-    "@adonisjs/core": "^7.1.1",
+    "@adonisjs/ally": "6.3.0",
+    "@adonisjs/core": "^7.3.1",
     "@adonisjs/eslint-config": "^3.0.0",
     "@adonisjs/prettier-config": "^1.4.5",
     "@adonisjs/tsconfig": "^2.0.0",
-    "typescript": "~5.9.3"
+    "typescript": "~6.0.3"
   },
   "peerDependencies": {
-    "@adonisjs/ally": "^6.0.0",
-    "@adonisjs/core": "^7.0.1"
+    "@adonisjs/ally": "^6.3.0",
+    "@adonisjs/core": "^7.3.1"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/package"
