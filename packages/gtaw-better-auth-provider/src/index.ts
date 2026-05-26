@@ -59,7 +59,7 @@ async function fetchUserInfoFromGTAW(baseURL: string, tokens: OAuth2Tokens) {
   return user;
 }
 
-export function gtawOAuth(
+export function gtaworld(
   options: GTAWOptions & Omit<GenericOAuthConfig, "providerId">,
 ): GenericOAuthConfig {
   const { server = "en", ...other } = options;
@@ -139,3 +139,8 @@ export function gtawOAuth(
     ...other,
   };
 }
+
+/**
+ * @deprecated Use {@link gtaworld} instead.
+ */
+export const gtawOAuth = gtaworld;
