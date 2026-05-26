@@ -1,6 +1,6 @@
 {
   "name": "@gtaw-oauth-providers/adonisjs-ally",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -32,7 +32,7 @@
   "exports": {
     ".": {
       "types": "./build/index.d.ts",
-      "imoort": "./build/index.js"
+      "import": "./build/index.js"
     },
     "./types": "./build/types.d.ts"
   },
