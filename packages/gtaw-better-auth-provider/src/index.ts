@@ -1,6 +1,7 @@
 import type { OAuth2Tokens, ProviderOptions } from "better-auth";
 import { APIError } from "better-auth/api";
 import type { GenericOAuthConfig } from "better-auth/plugins/generic-oauth";
+import ky from "ky";
 
 type GTAW_SERVERS = "en" | "fr";
 
@@ -39,24 +40,17 @@ const GTAW_BASE_URL = {
 } as const;
 
 async function fetchUserInfoFromGTAW(baseURL: string, tokens: OAuth2Tokens) {
-  const response = await fetch(`${baseURL}/api/user`, {
-    headers: {
-      Authorization: `Bearer ${tokens.accessToken}`,
-      Accept: "application/json",
-      "User-Agent": "Better-Auth/1.0",
-    },
-  });
+  const data = await ky
+    .get(`${baseURL}/api/user`, {
+      headers: {
+        Authorization: `Bearer ${tokens.accessToken}`,
+        Accept: "application/json",
+        "User-Agent": "Better-Auth/1.0",
+      },
+    })
+    .json<GTAWProfile>();
 
-  if (!response.ok) {
-    throw new Error(
-      `Failed to fetch GTAW user info: ${response.status} ${response.statusText}`,
-    );
-  }
-
-  const data = (await response.json()) as GTAWProfile;
-  const { user } = data;
-
-  return user;
+  return data.user;
 }
 
 export function gtaworld(
