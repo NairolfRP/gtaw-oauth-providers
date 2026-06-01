@@ -87,7 +87,7 @@ export function gtaworld(
       return {
         id: accountID,
         name: user.username,
-        email: `fakeemail+${accountID}@gta.world`,
+        email: `${accountID}@gtaw.placeholder.local`,
         emailVerified: false,
         createdAt: new Date(),
         updatedAt: new Date(),
