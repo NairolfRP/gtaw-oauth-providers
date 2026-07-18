@@ -41,8 +41,7 @@
     "clean": "rm -rf build"
   },
   "dependencies": {
-    "better-auth": "^1.6.13",
-    "ky": "^2.0.2"
+    "better-auth": "^1.6.23"
   },
   "peerDependencies": {
     "better-auth": "^1.6.11"
