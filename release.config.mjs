@@ -2,7 +2,7 @@
  * @type {import('semantic-release').GlobalConfig}
  */
 export default {
-  branches: ["main", { name: "rc", prerelease: "rc", channel: "rc" }],
+  branches: [{ name: "main" }, { name: "rc", prerelease: "rc", channel: "rc" }],
   extends: "semantic-release-monorepo",
   plugins: [
     [
