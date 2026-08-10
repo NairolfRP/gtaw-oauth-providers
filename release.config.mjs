@@ -2,21 +2,10 @@
  * @type {import('semantic-release').GlobalConfig}
  */
 export default {
-  branches: [{ name: "main" }, { name: "rc", prerelease: "rc", channel: "rc" }],
+  branches: [{ name: "main" }, { name: "rc", prerelease: true, channel: "rc" }],
   extends: "semantic-release-monorepo",
   plugins: [
-    [
-      "@semantic-release/commit-analyzer",
-      {
-        releaseRules: [
-          {
-            type: "chore",
-            scope: "deps",
-            release: "patch",
-          },
-        ],
-      },
-    ],
+    "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm",
     "@semantic-release/github",
