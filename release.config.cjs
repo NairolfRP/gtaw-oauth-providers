@@ -1,8 +1,11 @@
 /**
  * @type {import('semantic-release').GlobalConfig}
  */
-export default {
-  branches: [{ name: "main" }, { name: "rc", prerelease: true, channel: "rc" }],
+module.exports = {
+  branches: [
+    "main", 
+    { name: "rc", prerelease: "rc", channel: "rc" }
+  ],
   extends: "semantic-release-monorepo",
   plugins: [
     "@semantic-release/commit-analyzer",
