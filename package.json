@@ -14,8 +14,8 @@
     "lint": "eslint --cache .",
     "format": "prettier --cache -c .",
     "format:write": "prettier --cache --write .",
-    "release": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release --config $PWD/release.config.cjs",
-    "release:dry": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release --dry-run --config $PWD/release.config.cjs"
+    "release": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo --branches main --branches next",
+    "release:dry": "pnpm build && pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release --dry-run -e semantic-release-monorepo --branches main --branches next"
   },
   "keywords": [],
   "author": {
