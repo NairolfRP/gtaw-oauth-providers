@@ -1,40 +1,32 @@
 name: Release
 on:
   workflow_dispatch:
-    inputs:
-      ref:
-        description: "Branch or tag to release from"
-        required: true
-        default: main
-        type: string
 
 permissions:
-  contents: read # for checkout
+  contents: read
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [24]
     permissions:
-      contents: write # to be able to publish a GitHub release
-      issues: write # to be able to comment on released issues
-      pull-requests: write # to be able to comment on released pull requests
-      id-token: write # to enable use of OIDC for npm provenance
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          ref: ${{ inputs.ref || github.ref_name || github.event.repository.default_branch }}
           fetch-depth: 0
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Install pnpm and Node.js
+        uses: pnpm/setup@c9883cc79df532ad1a7b81bf9ab944ceb090d65c
         with:
-          node-version: 24
-          cache: "pnpm"
-      - name: Install dependencies
-        run: pnpm install
+          runtime: node@${{ matrix.node-version }}
+          cache: true
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
       - name: Release
