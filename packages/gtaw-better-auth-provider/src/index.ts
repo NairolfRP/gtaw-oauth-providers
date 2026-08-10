@@ -55,12 +55,13 @@ async function fetchUserInfoFromGTAW(baseURL: string, tokens: OAuth2Tokens) {
 
 export function gtaworld(
   options: GTAWOptions & Omit<GenericOAuthConfig, "providerId">,
-): GenericOAuthConfig {
+): GenericOAuthConfig<"gtaw"> {
   const { server = "en", ...other } = options;
   const baseURL = server === "fr" ? GTAW_BASE_URL.FR : GTAW_BASE_URL.EN;
 
   return {
     providerId: "gtaw",
+    name: `GTA World${server === "fr" ? " France" : null}`,
     authorizationUrl: `${baseURL}/oauth/authorize`,
     tokenUrl: `${baseURL}/oauth/token`,
     userInfoUrl: `${baseURL}/api/user`,
@@ -120,10 +121,7 @@ export function gtaworld(
         });
       }
 
-      const accountID = String(profile.id);
-
       return {
-        id: accountID,
         name: profile.name,
         email: profile.email,
         emailVerified: profile.emailVerified,
@@ -133,8 +131,3 @@ export function gtaworld(
     ...other,
   };
 }
-
-/**
- * @deprecated Use {@link gtaworld} instead.
- */
-export const gtawOAuth = gtaworld;

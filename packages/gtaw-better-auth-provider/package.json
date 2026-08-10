@@ -1,6 +1,6 @@
 {
   "name": "@gtaw-oauth-providers/better-auth",
-  "version": "2.1.2",
+  "version": "3.0.0-rc",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -41,10 +41,10 @@
     "clean": "rm -rf build"
   },
   "dependencies": {
-    "better-auth": "^1.6.23",
+    "better-auth": "1.7.0-rc.4",
     "ky": "^2.0.2"
   },
   "peerDependencies": {
-    "better-auth": "^1.6.0"
+    "better-auth": "^1.7.0-rc.4"
   }
 }
