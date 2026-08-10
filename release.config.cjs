@@ -4,7 +4,7 @@
 module.exports = {
   branches: [
     "main", 
-    { name: "rc", prerelease: "rc", channel: "rc" }
+    "next"
   ],
   extends: "semantic-release-monorepo",
   plugins: [
