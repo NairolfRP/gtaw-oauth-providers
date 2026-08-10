@@ -1,9 +1,12 @@
 name: Release
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch or tag to release from"
+        required: true
+        default: main
+        type: string
 
 permissions:
   contents: read # for checkout
@@ -21,6 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
+          ref: ${{ inputs.ref || github.ref_name || github.event.repository.default_branch }}
           fetch-depth: 0
       - name: Install pnpm
         uses: pnpm/action-setup@v4
